@@ -1,0 +1,53 @@
+.ServiceContainerAndLogo{
+    margin: 80px 0 80px;
+}
+
+.LogoService{
+    text-align: center;
+    font-family: "OpenSansBold";
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+.ServiceInfoContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media (min-width:2000px) {
+    .ServiceInfoContainer{
+        width: 1920px;
+        grid-area: Element;
+    }
+
+    .fexingDisplay{
+        display: grid;
+        grid-template-columns: 1fr 1920px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "padding1 Element padding2";
+    }
+}
+
+@media (max-width:950px) {
+    .ServiceInfoContainer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .ServiceContainerAndLogo {
+        margin: 80px 0 30px;
+    }
+
+    .ServiceContainerAndLogo .ServiceBlock:nth-child(3){
+        margin: 0 100px 50px
+    }
+}
+
+@media (max-width:500px) {
+    .ServiceContainerAndLogo .ServiceBlock:nth-child(3) {
+        margin: 0 25px 50px;
+    }
+}

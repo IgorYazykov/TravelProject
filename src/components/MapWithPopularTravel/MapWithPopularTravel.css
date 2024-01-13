@@ -1,0 +1,89 @@
+.PopularTravelContainer{
+    margin-bottom: 50px;
+}
+
+.TitleOfPopularTravel{
+    text-align: center;
+    margin: 50px 0 30px;
+    font-family: "OpenSansBold";
+    font-size: 40px;
+}
+
+.mapAndPopularTravel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.SmallCardContainer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 150px;
+    justify-content: space-around;
+}
+
+@media (min-width:2000px) {
+    .fixingForPopularTravel{
+        display: grid;
+        grid-template-columns: 1fr 1920px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "padding1 Element padding2";
+    }
+
+    .mapAndPopularTravel{
+        grid-area: Element;
+    }
+}
+
+@media (max-width: 1500px) {
+    .imgMap{
+        height: 610px;
+        width: 535px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .imgMap {
+        height: 450px;
+        width: 410px;
+    }
+
+    .SmallCardContainer {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 950px) {
+    .imgMap{
+        display: none;
+    }
+
+    .mapAndPopularTravel{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PopularTravelContainer{
+        background-image: url("../../../public/img/world_map_popular_travel_with_point.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding-bottom: 50px;
+    }
+
+    .TitleOfPopularTravel {
+        margin: 0;
+        padding: 50px 0 30px;
+    }
+
+    .SmallCardContainer {
+        margin-right: 0;
+    }
+}
+
+@media (max-width:400px) {
+    .TitleOfPopularTravel {
+        margin: 0 25px;
+    }
+}

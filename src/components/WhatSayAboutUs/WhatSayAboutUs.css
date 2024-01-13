@@ -1,0 +1,271 @@
+.whatSayAboutUs{
+    background-color: #ECF1F0;
+    text-align: center;
+    padding: 40px 0 100px;
+}
+
+.logoOfReviews{
+    font-family: "OpenSansBold";
+    font-size: 40px;
+    padding-bottom: 40px;
+    margin: 0;
+}
+
+.reviewsContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.arrowContainer{
+    height: 110px;
+    width: 110px;
+    border: solid rgba(0, 0, 0, 0.411);
+    background-color: #e4e7e7;
+    border-radius: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowContainer:hover{
+    background-color: #84bebe;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.315);
+}
+
+.arrowContainer:active{
+    scale: 95%;
+    background-color: #92e4e4;
+}
+
+.boxWithArrow{
+    width: 100px;
+    height: 100px;
+}
+
+.AnimationForIMG{
+    animation-name: StartIMG;
+    animation-duration: 4s;
+    height: 680px;
+}
+
+.imgOfCity{
+    height: 540px;
+    width: 1100px;
+    border-radius: 25px;
+    border: solid rgba(0, 0, 0, 0.795);
+}
+
+.containerForFeedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divWithFeedback{
+    bottom: 180px;
+    position: relative;
+    background-color: white;
+    width: 300px;
+    /* height: 220px; */
+    border: solid rgb(70, 70, 70);
+    border-radius: 15px;
+}
+
+.textWithName{
+    padding-top: 20px;
+    font-family: "PacificoRegular";
+    font-size: 22px;
+}
+
+.textWithFeedback{
+    font-size: 20px;
+    font-family: "CaveatMedium";
+    padding-top: 60px;
+}
+
+.imgOfPeople{
+    z-index: 100;
+    bottom: 130px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: solid rgb(70, 70, 70);
+}
+
+.reviewersContainerForNavigation{
+    display: none;
+}
+
+@keyframes StartIMG {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@media (min-width: 2000px) {
+    .fixingDisplayAboutUs{
+        display: grid;
+        grid-template-columns: 1fr 1920px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "padding1 Element padding2";
+    }
+
+    .reviewsContainer{
+        grid-area: Element;
+    }
+}
+
+@media (max-width: 1400px) {
+    .imgOfCity {
+        height: 490px;
+        width: 826px;
+    }
+
+    .imgOfPeople {
+        width: 60px;
+        height: 60px;
+    }
+
+    .divWithFeedback {
+        bottom: 160px;
+        width: 270px;
+        /* height: 165px; */
+    }
+
+    .textWithFeedback {
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+    .textWithName {
+        padding-top: 5px;
+        font-size: 18px;
+    }
+
+    .whatSayAboutUs {
+        padding: 40px 0 40px;
+    }
+
+    .AnimationForIMG {
+        height: 600px;
+    }
+
+    .boxWithArrow {
+        width: 80px;
+        height: 80px;
+    }
+
+    .arrowContainer {
+        height: 90px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .imgOfCity {
+        height: 422px;
+        width: 670px;
+    }
+
+    .arrowContainer {
+        height: 60px;
+        width: 60px;
+    }
+
+    .boxWithArrow {
+        width: 50px;
+        height: 50px;
+    }
+
+    .AnimationForIMG {
+        height: 540px;
+    }
+}
+
+@media (max-width:950px) {
+    .imgOfCity {
+        height: 346px;
+        width: 532px;
+    }
+
+    .AnimationForIMG {
+        height: 460px;
+    }
+
+    .reviewersContainerForNavigation{
+        display: flex;
+        justify-content: center;
+    }
+
+    .iconReviewer{
+        border-radius: 50%;
+        border: solid rgb(70, 70, 70);
+        width: 80px;
+        height: 80px;
+    }
+
+    .iconReviewer > img{
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+    }
+
+    .reviewersContainerForNavigation .iconReviewer:nth-child(2){
+        margin: 0 50px;
+    }
+
+    .arrowContainer{
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .imgOfCity {
+        height: 280px;
+        width: 400px;
+    }
+
+    .AnimationForIMG {
+        height: 360px;
+    }
+}
+
+@media (max-width:450px) {
+    .imgOfCity {
+        height: 200px;
+        width: 280px;
+    }
+
+    .divWithFeedback {
+        bottom: 95px;
+        width: 252px;
+    }
+
+    .imgOfPeople {
+        bottom: 60px;
+    }
+
+    .iconReviewer {
+        width: 60px;
+        height: 60px;
+    }
+
+    .iconReviewer > img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width:420px) {
+    .logoOfReviews {
+        margin: 0 25px;
+    }
+}

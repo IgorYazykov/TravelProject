@@ -1,0 +1,160 @@
+p{
+    margin: 0;
+}
+
+.ThreeStepToTripContainer{
+    text-align: center;
+}
+
+.NameOfConteinerForStep{
+    padding: 60px 0 80px;
+}
+
+.NameOfConteinerForStep p:nth-child(1){
+    font-family: "OpenSansBold";
+    font-size: 40px;
+}
+
+.NameOfConteinerForStep p:nth-child(2){
+    font-family: "OpenSansRegular";
+    font-size: 24px;
+}
+
+.ThreeStepAndPhotoCOntainer{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 60px;
+}
+
+.boxWithStep{
+    display: flex;
+}
+
+.boxWithIconStep{
+    width: 66px;
+    height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.TextOfSteps{
+    text-align: start;
+}
+
+.TextOfSteps p{
+    padding-left: 10px;
+}
+
+.TextOfSteps p:nth-child(1){
+    font-family: "OpenSansBold";
+    font-size: 16px;
+}
+
+.TextOfSteps p:nth-child(2){
+    font-family: "OpenSansRegular";
+    font-size: 16px;
+}
+
+.StepContainer{
+    width: 500px;
+    height: 519px;
+}
+
+.StepContainer .boxWithStep:nth-child(1){
+    margin: 80px 0 60px;
+}
+
+.StepContainer .boxWithStep:nth-child(2){
+    margin-bottom: 60px;
+}
+
+@media (min-width:2000px) {
+    .fixingEasyStepDisplay{
+        display: grid;
+        grid-template-columns: 1fr 1920px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "padding1 Element padding2";
+    }
+
+    .ThreeStepAndPhotoCOntainer{
+        grid-area: Element;
+    }
+}
+
+@media (max-width: 1250px) {
+    .StepContainer{
+        width: 350px;
+        margin-left: 50px;
+    }
+
+    .TextOfSteps{
+        width: 300px;
+    }
+    
+    .NameOfConteinerForStep {
+        padding: 55px 0 60px;
+    }
+
+    .ImgTripTo{
+        margin: 0 50px;
+    }
+
+    .ImgTripTo > img{
+        height: 475px;
+    }
+
+    .ThreeStepAndPhotoCOntainer {
+        padding-bottom: 50px; 
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 950px) {
+    .StepContainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 500px;
+        margin: 0 50px;
+        height: 430px;
+    }
+
+    .ImgTripTo{
+        margin: 0 50px;
+    }
+
+    .NameOfConteinerForStep {
+        padding: 55px 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .NameOfConteinerForStep p:nth-child(1){
+        margin: 0 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .ImgTripTo > img {
+        height: 380px;
+    }
+
+    .TextOfSteps {
+        width: 210px;
+    }
+
+    .StepContainer {
+        width: 380px;
+        height: 470px;
+    }
+}
+
+@media (max-width:420px) {
+    .ImgTripTo > img {
+        width: 280px;
+        height: 310px;
+    }
+}

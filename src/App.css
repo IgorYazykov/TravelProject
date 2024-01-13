@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "LaliaBold";
+  src: url("/src/fonts/Laila-Bold.ttf");
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "OpenSansExtraBold";
+  src: url("/src/fonts/OpenSans_SemiCondensed-ExtraBold.ttf");
+  font-weight: 800;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "OpenSansSemilBold";
+  src: url("/src/fonts/OpenSans_Condensed-SemiBold.ttf");
+  font-weight: 600;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("/src/fonts/OpenSans_SemiCondensed-Regular.ttf");
+  font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("/src/fonts/OpenSans_Condensed-Bold.ttf");
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@font-face {
+  font-family: "PacificoRegular";
+  src: url("/src/fonts/Pacifico-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "CaveatMedium";
+  src: url("/src/fonts/Caveat-Medium.ttf");
+  font-weight: 500;
+}
+
+.cursorDefault{
+  cursor: default;
+}
+
+@media (min-width:2000px) {
+  .fexingDisplay{
+    display: grid;
+    grid-template-columns: 1fr 1920px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "padding1 Element padding2";
   }
 }

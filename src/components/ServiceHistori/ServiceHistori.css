@@ -1,0 +1,71 @@
+.ServiceHistoriImg{
+    background-color: #0058540e;
+    text-align: center;
+    background-size: 1184px 622px;
+    background-repeat: no-repeat;
+    background-image: url("../../../public/img/world_map_PNG28\ 1.png");
+    background-position: center; 
+}
+
+.LogoAndTextContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+}
+
+.LogoOfAchievements{
+    width: 400px;
+    padding: 60px 0 20px 0;
+    font-family: "OpenSansBold";
+    font-size: 40px;
+}
+
+.TextOfAchievements{
+    width: 430px;
+    font-family: "OpenSansRegular";
+    font-size: 16px;
+    padding-bottom: 100px;
+}
+
+.AchievementsCardContainer{
+    padding: 0 0 100px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media (min-width:2000px) {
+    .fixingDisplayForService{
+        display: grid;
+        grid-template-columns: 1fr 1920px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "padding1 Element padding2";
+    }
+
+    .AchievementsCardContainer{
+        grid-area: Element;
+    }
+}
+
+@media (max-width:950px) {
+    .TextOfAchievements{
+        padding-bottom: 50px;
+    }
+
+    .AchievementsCardContainer{
+        padding: 0 0 50px 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width:450px) {
+    .TextOfAchievements {
+        width: 280px;
+    }
+
+    .LogoOfAchievements {
+        width: 280px;
+    }
+}

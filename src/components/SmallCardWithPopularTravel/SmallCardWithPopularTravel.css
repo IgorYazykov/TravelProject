@@ -1,0 +1,104 @@
+.SmallCardPopularTravel{
+    width: 659px;
+    height: 223px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.411);
+}
+
+.SmallCardPopularTravel img{
+    width: 223px;
+    height: 223px;
+}
+
+.SmallCardPopularTravel p{
+    font-family: "OpenSansSemilBold";
+    font-size: 20px;
+}
+
+.SmallCardPopularTravel p:nth-child(3){
+    width: 93px;
+    height: 54px;
+}
+
+.SmallCardPopularTravel p:nth-child(4){
+    margin-right: 50px;
+}
+
+@media (max-width: 1700px) {
+    .SmallCardPopularTravel{
+        width: 559px;
+    }
+
+    .SmallCardPopularTravel p:nth-child(4) {
+        margin-right: 25px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .SmallCardPopularTravel img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .SmallCardPopularTravel {
+        width: 465px;
+        height: 180px;
+    }
+
+    .SmallCardPopularTravel p:nth-child(4) {
+        margin-right: 10px;
+    }
+
+    .SmallCardPopularTravel p {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .SmallCardPopularTravel img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .SmallCardPopularTravel {
+        width: 400px;
+        height: 120px;
+    }
+
+    .SmallCardPopularTravel p:nth-child(3) {
+        width: 80px;
+        height: 54px;
+    }
+}
+
+@media (max-width: 950px) {
+    .SmallCardPopularTravel{
+        background-color: white;
+        margin-bottom: 50px;
+        box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.7);
+    }
+}
+
+
+@media (max-width:450px) {
+    .SmallCardPopularTravel {
+        width: 280px;
+        height: 120px;
+    }
+
+    .SmallCardPopularTravel p:nth-child(4) {
+        margin-right: 10px;
+        display: none;
+    }
+
+    .SmallCardPopularTravel p {
+        font-size: 16px;
+    }
+
+    .SmallCardPopularTravel {
+        width: 280px;
+    }
+}

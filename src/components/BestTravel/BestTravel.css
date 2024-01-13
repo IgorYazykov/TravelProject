@@ -1,0 +1,135 @@
+.BestTravelContainer{
+    background-color: #ECF1F0;
+    text-align: center;
+}
+
+.LogoOfBestPackages{
+    padding: 50px 0;
+    margin: 0;
+    font-family: "OpenSansBold";
+    font-size: 40px;
+}
+
+.ButtonContainer{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 60px;
+}
+
+.ButtonOfBestTravel{
+    width: 180px;
+    height: 60px;
+    background-color: #666666;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ButtonOfBestTravel p{
+    font-family: "OpenSansBold";
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.ButtonOfBestTravel:hover{
+    background-color: #00A651;
+}
+
+.CardOfBestTravelContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.discoverButtonContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.DiscoverButton{
+    border-radius: 10px;
+    background-color: #00A651;
+    width: 300px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:40px 0 80px;
+    cursor: pointer;
+}
+
+.DiscoverButton p{
+    font-family: "OpenSansBold";
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.DiscoverButton:hover{
+    background-color: #007e3d;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.349);
+}
+
+.DiscoverButton:active{
+    background-color: #005c2c;
+    scale: 95%;
+}
+
+@media (min-width: 2000px) {
+    .ButtonContainer{
+        grid-area: Element1;
+    }
+
+    .CardOfBestTravelContainer{
+        grid-area: Element2;
+    }
+
+    .fixingBestTravelDisplay{
+        display: grid;
+        grid-template-columns: 1fr 1920px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "padding1 Element1 padding2"
+            "padding1 Element2 padding2";
+    }
+}
+
+@media (max-width: 1700px) {
+    .ButtonOfBestTravel{
+        width: 140px;
+        height: 50px;
+    }
+
+    .ButtonOfBestTravel p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .ButtonOfBestTravel {
+        width: 105px;
+    }
+}
+
+@media (max-width: 950px) {
+    .ButtonContainer{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ButtonContainer .ButtonOfBestTravel{
+        margin: 0 25px 25px;
+    }
+
+    .CardOfBestTravelContainer{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width:400px) {
+    .LogoOfBestPackages {
+        margin: 0 25px;
+    }
+}

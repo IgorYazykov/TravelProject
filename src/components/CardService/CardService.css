@@ -1,0 +1,59 @@
+.ServiceBlock{
+    width: 416px;
+    height: 232px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #F9F9F9;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.ServiceBlock img:nth-child(1){
+    margin: 35px 0 20px 35px;
+}
+
+.ServiceBlock p:nth-child(2){
+    font-family: "OpenSansBold";
+    font-size: 24px;
+    margin: 0 0 20px 35px;
+}
+
+.ServiceBlock p:nth-child(3){
+    font-family: "OpenSansRegular";
+    font-size: 16px;
+    margin: 0 60px 27px 35px;
+}
+
+.ServiceBlock:hover{
+    background-color: white;
+    box-shadow:
+        -10px -10px 10px #dfdfdf,
+        10px -10px 10px #dfdfdf,
+        -10px 10px 10px #dfdfdf,
+        10px 10px 10px #dfdfdf;
+}
+
+@media (max-width: 1400px) {
+    .ServiceBlock {
+        width: 325px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .ServiceBlock p:nth-child(3) {
+        margin: 0 35px 27px 35px;
+    }
+
+    .ServiceBlock {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 950px) {
+    .ServiceBlock {
+        margin: 0 25px 50px;
+    }
+}

@@ -1,0 +1,280 @@
+/* .footerContainer{
+    padding-top: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+} */
+
+.footerContainer{
+    padding-top: 50px;
+    background-color: white;
+    display: grid;
+        grid-template-columns: 1fr 200px 1fr 500px 1fr 480px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "pad1 Logo pad2 Links pad3 Social pad4";
+}
+
+.logoContainerInFoter{
+    grid-area: Logo;
+}
+
+.logoContainerInFoter p:nth-child(1){
+    width: 97px;
+    font-family: "LaliaBold";
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.logoContainerInFoter p:nth-child(2){
+    width: 180px;
+    font-family: "OpenSansSemilBold";
+    margin: 0;
+    color: black;
+    font-size: 13px;
+}
+
+.containerForLink{
+    grid-area: Links;
+    display: flex;
+    justify-content: space-between;
+}
+
+.TitleLink{
+    color: #080809;
+    font-size: 21px;
+    font-family: "OpenSansBold";
+    padding-bottom: 30px;
+    /* padding-right: 200px; */
+}
+
+.OneBlockWithLink .TitleLink:nth-child(2){
+    padding-right: 0;
+} 
+
+.Link{
+    color: #5E6282;
+    font-size: 18px;
+    font-family: "OpenSansRegular";
+    padding-bottom: 30px;
+}
+
+.ContainerWithSocial{
+    grid-area: Social;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conteinerForSocialCircle{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteinerForSocialCircle .socialCircle:nth-child(2){
+    margin: 0 50px;
+}
+
+.socialCircle{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.socialCircle:hover{
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.37);
+}
+
+.socialCircle:active{
+    scale: 95%;
+}
+
+.socialCircle img{
+    width: 35px;
+    height: 35px;
+}
+
+.smallText{
+    color: #5E6282;
+    font-size: 20px;
+    /* margin: 30px 0; */
+}
+
+.containerForImg{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containerForImg .buttonForStoreApp:nth-child(1){
+    margin-right: 10px;
+}
+
+.buttonForStoreApp{
+    width: 220px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonForStoreApp:hover{
+    background-color: rgb(51, 51, 51);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.384);
+}
+
+.buttonForStoreApp:active{
+    background-color: rgb(34, 63, 31);
+}
+
+.buttonForStoreApp p{
+    padding-left: 10px;
+}
+
+.buttonForStoreApp img{
+    width: 30px;
+    height: 30px;
+    margin: 10px 0 10px 20px;
+}
+
+.allRights{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    color: #5E6282;
+    font-family: "OpenSansRegular";
+    font-size: 14px;
+}
+
+@media (min-width: 2000px) {
+    .FixingFooterDisplay{
+        display: grid;
+        grid-template-columns: 1fr 1920px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "padding1 Element padding2";
+    }
+
+    .footerContainer{
+        grid-area: Element;
+    }
+}
+
+@media (max-width: 1700px) {
+    .buttonForStoreApp{
+        width: 190px;
+    }
+
+    /* .TitleLink{
+        padding-right: 100px;
+    } */
+}
+
+@media (max-width:1500px) {
+    .footerContainer{
+        grid-template-columns: 1fr 200px 1fr 400px 1fr 480px 1fr;
+    }
+}
+
+@media (max-width:1250px) {
+    .footerContainer{
+        grid-template-columns: 1fr 180px 1fr 400px 1fr 250px 1fr;
+    }
+
+    .ContainerWithSocial{
+        width: 250px;
+        align-items: center;
+    }
+
+    .conteinerForSocialCircle div:nth-child(2){
+        margin: 0 15px;
+    }
+
+    .containerForImg{
+        justify-content: center;
+    }
+
+    .containerForImg .buttonForStoreApp:nth-child(1){
+        margin: 0 0 15px;
+    }
+
+    .smallText{
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    .buttonForStoreApp {
+        width: 220px;
+    }
+
+    .buttonForStoreApp > p {
+        font-size: 15px;
+    }
+
+    .TitleLink {
+        padding-right: 50px;
+    }
+
+    .socialCircle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .socialCircle > img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 950px) {
+    .footerContainer{
+        grid-template-columns: 1fr 250px 1fr 250px 1fr;
+        grid-template-areas: 
+            "pad1 Logo margin Social pad2"
+            "pad1 Links Links Links pad2" ;
+    }
+
+    .logoContainerInFoter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footerContainer > .logoContainerInFoter,.ContainerWithSocial{
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footerContainer{
+        grid-template-columns: 1fr 250px 1fr;
+        grid-template-areas: 
+            "pad1 Logo pad2"
+            "pad1 Social pad2"
+            "pad1 Links pad2" ;
+    }
+
+    .containerForLink{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .OneBlockWithLink{
+        text-align: center;
+        margin: 0 20px;
+    }
+
+    .TitleLink {
+        padding-right: 0;
+    }
+}

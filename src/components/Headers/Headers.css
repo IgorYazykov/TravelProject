@@ -1,0 +1,158 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    position: absolute;
+    width: 100%;
+    grid-area: Element;
+}
+
+.TexstLogo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.TexstLogo p {
+    font-family: "LaliaBold";
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.navigationContainer{
+    width: 382px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigationContainer p{
+    font-family: "OpenSansSemilBold";
+    color: white;
+    font-size: 20px;
+}
+
+.imageContainer{
+    display: flex;
+}
+
+.imageContainer div img{
+    width: 48px;
+    height: 48px;
+}
+
+.imageContainer div:nth-child(1){
+    padding-right: 30px;
+}
+
+.imageContainer div:nth-child(3){
+    display: none;
+}
+
+@media (min-width:2000px) {
+    .headerContainer{
+        width: 1920px;
+        grid-area: Element;
+    }
+
+    .fixingDisplay{
+        display: grid;
+        grid-template-columns: 1fr 1920px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "padding1 Element padding2";
+        position: absolute;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 780px) {
+    .navigationContainer {
+        width: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .imageContainer div:nth-child(2){
+        padding-right: 30px;
+    }
+
+    .imageContainer div:nth-child(3){
+        display: block;
+    }
+
+    .noneDispaly{
+        display: none;
+    }
+
+    .headerContainer{
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .TexstLogo{
+        margin-left: 25px;
+    }
+
+    .imageContainer{
+        margin-right: 25px;
+    }
+
+    .mobileMenuContainer{
+        position: relative;
+    }
+
+    .mobileMenu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(55, 77, 46, 0.774);
+        border-radius: 25px;
+        border: solid black 1px;
+        width: 150px;
+        left: 350px;
+        top: 85px;
+    }
+
+    .navigationContainer{
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+    }
+
+    .navigationContainer>p{
+        margin-bottom: 10px;
+    }
+
+    .navigationContainer p:nth-child(1){
+        margin-top: 10px;
+    }
+    
+    .buttonCloseMobMenu{
+        border-radius: 15px;
+        background-color: rgba(165, 42, 42, 0.651);
+        text-align: center;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .buttonCloseMobMenu>p{
+        font-family: "OpenSansSemilBold";
+        color: white;
+        font-size: 20px;
+        margin: 5px 10px;
+    }
+}
+
+@media (max-width:350px) {
+    .imageContainer div:nth-child(1){
+        padding-right: 10px;
+    }
+
+    .imageContainer div:nth-child(2){
+        padding-right: 10px;
+    }
+}
